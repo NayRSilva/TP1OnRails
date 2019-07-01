@@ -6,7 +6,7 @@ class Product < ApplicationRecord
     end
 
     scope :games, -> { where(type: 'Game') } 
-scope :consoles, -> { where(type: 'Console') }
+    scope :consoles, -> { where(type: 'Console') }
 end
 
 class Game < Product; end
