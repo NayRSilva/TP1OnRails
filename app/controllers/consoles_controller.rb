@@ -1,28 +1,20 @@
 class ConsolesController < ApplicationController
     before_action :set_console, only: [:show, :edit, :update, :destroy]
 
-    # GET /products
-    # GET /products.json
     def index
-        @console = Console.all
+        @consoles = Console.all
     end
 
-    # GET /products/1
-    # GET /products/1.json
     def show
     end
 
-    # GET /products/new
     def new
         @console = Console.new
     end
 
-    # GET /products/1/edit
     def edit
     end
 
-    # POST /products
-    # POST /products.json
     def create
         @console = Console.new(console_params)
 
@@ -37,8 +29,6 @@ class ConsolesController < ApplicationController
         end
     end
 
-    # PATCH/PUT /products/1
-    # PATCH/PUT /products/1.json
     def update
         respond_to do |format|
         if @console.update(console_params)
@@ -51,8 +41,6 @@ class ConsolesController < ApplicationController
         end
     end
 
-    # DELETE /products/1
-    # DELETE /products/1.json
     def destroy
         @console.destroy
         respond_to do |format|
