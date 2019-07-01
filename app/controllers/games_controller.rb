@@ -11,6 +11,7 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    @consoles = Console.all
   end
 
   def edit
@@ -58,6 +59,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:name, :price)
+      params.require(:game).permit(:name, :price, :quantity, :console_id)
     end
 end

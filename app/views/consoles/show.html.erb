@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Console ID: <%= @console.id %></h1>
 <p>
   <strong>Name:</strong>
   <%= @console.name %>
@@ -11,9 +11,15 @@
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @console.type %>
+  <strong>Quantity:</strong>
+  <%= @console.quantity %>
 </p>
+
+<p>
+  <strong>Games:</strong>
+  <%#= @console.games %>
+</p>
+
 
 <%= link_to 'Edit', edit_product_path(@console) %> |
 <%= link_to 'Destroy', @console, method: :delete, data: { confirm: 'Are you sure?' } %> |

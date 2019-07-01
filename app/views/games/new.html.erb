@@ -24,13 +24,19 @@
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.label :quantity %>
+    <%= form.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :console_id %>
+    <%= form.select(:console_id, @consoles.all.collect {|a| [a.name, a.id]}) -%>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>
 
 <%= link_to 'Back', games_path %>
